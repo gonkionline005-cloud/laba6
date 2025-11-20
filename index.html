@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web-Мастер: Интерактивный Блог (ЛР №6)</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css"> 
+</head>
+<body>
+
+    <header class="page-header">
+        <h1>Web-Мастер: Блог о современном дизайне</h1>
+        <button id="theme-switcher" class="theme-switcher-btn">Сменить тему</button>
+    </header>
+
+    <nav class="main-nav">
+        <ul>
+            <li><a href="#">Главная</a></li>
+            <li><a href="#">Уроки CSS Grid</a></li>
+            <li><a href="#">Flexbox Практика</a></li>
+            <li><a href="#">Об авторе</a></li>
+        </ul>
+    </nav>
+
+    <div class="content-wrapper">
+        
+        <aside class="left-sidebar">
+            <h2>Темы</h2>
+            <ul class="categories-list">
+                <li><a href="#">Frontend-разработка</a></li>
+                <li><a href="#">UI/UX Дизайн</a></li>
+                <li><a href="#">Адаптивная верстка</a></li>
+                <li><a href="#">Производительность</a></li>
+            </ul>
+        </aside>
+
+        <main class="main-content">
+            
+            <section class="reviews-section">
+                <h2>Отзыв дня (Async API)</h2>
+                <button id="reload-reviews-btn" class="filter-btn active" style="margin-bottom: 20px;">Обновить отзыв</button>
+                
+                <div id="reviews-container" class="review-single-box">
+                    Загрузка...
+                </div>
+            </section>
+            
+            <hr style="border-color: #333; margin: 30px 0;">
+            
+            <section class="accordion-section">
+                <h2>Часто задаваемые вопросы</h2>
+                <div class="accordion-item">
+                    <h3 class="accordion-header">HTML5 и семантика</h3>
+                    <div class="accordion-content">
+                        <p>Изучение новых семантических тегов, таких как main, article и section, помогает улучшить доступность и SEO вашего сайта.</p>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h3 class="accordion-header">Flexbox и Grid</h3>
+                    <div class="accordion-content">
+                        <p>Grid Layout идеален для создания двухмерных сеток, а Flexbox лучше всего подходит для одномерного выравнивания элементов внутри контейнера.</p>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h3 class="accordion-header">Что такое LLM?</h3>
+                    <div class="accordion-content">
+                        <p>LLM (Large Language Model) — это большая языковая модель, такая как Gemini, которая используется для генерации кода и текста.</p>
+                    </div>
+                </div>
+            </section>
+            
+            <hr style="border-color: #333; margin: 30px 0;">
+            
+            <section class="gallery-section">
+                <h2>Фотогалерея (Async API)</h2>
+                <button id="reload-gallery-btn" class="filter-btn active" data-filter="all">Обновить картинки из API</button>
+                
+                <div id="images-container" class="gallery-container">
+                    </div>
+            </section>
+            
+            <hr style="border-color: #333; margin: 30px 0;">
+            
+            <h2>Свежие материалы</h2>
+
+            <section class="news-grid">
+                <article class="article-card">
+                    <h3>Семантика HTML</h3>
+                    <p>Использование тегов &lt;header&gt;, &lt;main&gt;, &lt;aside&gt; помогает поисковым системам лучше индексировать контент.</p>
+                    <a href="#">Узнать больше...</a>
+                </article>
+
+                <article class="article-card">
+                    <h3>Grid Layout</h3>
+                    <p>Создаем двухмерный макет с display: grid; и grid-template-columns. Float'ы больше не нужны!</p>
+                    <a href="#">К пошаговому уроку...</a>
+                </article>
+
+                <article class="article-card">
+                    <h3>Центрирование с Flexbox</h3>
+                    <p>Flexbox идеально для центрирования: align-items и justify-content решают все.</p>
+                    <a href="#">Посмотреть примеры...</a>
+                </article>
+            </section>
+        </main>
+
+        <aside class="right-sidebar">
+            <h2>Реклама / Спонсор</h2>
+            <div class="ad-block ad-promo">
+                <p>🚀 Подписывайтесь на наш Telegram-канал о дизайне!</p>
+            </div>
+            <div class="ad-block ad-subscribe">
+                <p>✉️ Получайте статьи первыми — подпишитесь!</p>
+            </div>
+        </aside>
+    </div>
+
+    <footer class="page-footer">
+        <p>&copy; 2025 Web-Мастер. Адаптивная верстка с Flexbox & Grid.</p>
+    </footer>
+    
+    <button id="scrollToTopBtn" aria-label="Наверх">↑</button>
+    
+    <div id="imageModal" class="modal">
+        <span class="close-btn">&times;</span>
+        <img class="modal-content" id="modalImage" alt="Увеличенное изображение">
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
